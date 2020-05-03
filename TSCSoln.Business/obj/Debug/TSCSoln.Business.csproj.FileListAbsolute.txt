@@ -1,0 +1,11 @@
+D:\Masters\TSCSoln\TSCSoln.Business\bin\Debug\TSCSoln.Business.dll
+D:\Masters\TSCSoln\TSCSoln.Business\bin\Debug\TSCSoln.Business.pdb
+D:\Masters\TSCSoln\TSCSoln.Business\obj\Debug\TSCSoln.Business.csproj.CoreCompileInputs.cache
+D:\Masters\TSCSoln\TSCSoln.Business\obj\Debug\TSCSoln.Business.dll
+D:\Masters\TSCSoln\TSCSoln.Business\obj\Debug\TSCSoln.Business.pdb
+D:\Masters\TSCSoln\TSCSoln.Business\bin\Debug\TSCSoln.DataAccess.dll
+D:\Masters\TSCSoln\TSCSoln.Business\bin\Debug\TSCSoln.Entities.dll
+D:\Masters\TSCSoln\TSCSoln.Business\bin\Debug\TSCSoln.DataAccess.pdb
+D:\Masters\TSCSoln\TSCSoln.Business\bin\Debug\TSCSoln.Entities.pdb
+D:\Masters\TSCSoln\TSCSoln.Business\obj\Debug\TSCSoln.Business.csprojAssemblyReference.cache
+D:\Masters\TSCSoln\TSCSoln.Business\obj\Debug\TSCSoln.Business.csproj.CopyComplete

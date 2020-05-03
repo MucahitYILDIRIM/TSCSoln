@@ -1,0 +1,9 @@
+D:\Masters\TSCSoln\TSCSoln.DataAccess\bin\Debug\TSCSoln.DataAccess.dll
+D:\Masters\TSCSoln\TSCSoln.DataAccess\bin\Debug\TSCSoln.DataAccess.pdb
+D:\Masters\TSCSoln\TSCSoln.DataAccess\obj\Debug\TSCSoln.DataAccess.csprojAssemblyReference.cache
+D:\Masters\TSCSoln\TSCSoln.DataAccess\obj\Debug\TSCSoln.DataAccess.csproj.CoreCompileInputs.cache
+D:\Masters\TSCSoln\TSCSoln.DataAccess\obj\Debug\TSCSoln.DataAccess.dll
+D:\Masters\TSCSoln\TSCSoln.DataAccess\obj\Debug\TSCSoln.DataAccess.pdb
+D:\Masters\TSCSoln\TSCSoln.DataAccess\bin\Debug\TSCSoln.Entities.dll
+D:\Masters\TSCSoln\TSCSoln.DataAccess\bin\Debug\TSCSoln.Entities.pdb
+D:\Masters\TSCSoln\TSCSoln.DataAccess\obj\Debug\TSCSoln.DataAccess.csproj.CopyComplete

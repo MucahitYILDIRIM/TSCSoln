@@ -1,0 +1,10 @@
+﻿@model  List<TSCSoln.Entities.Test.GetTestDTO>
+@{
+    ViewBag.Title = "Test";
+}
+
+@foreach (var item in Model)
+{
+    <div>@item.CH_TEST_NAME-@item.SQ_TEST_ID</div> <br/>
+}
+

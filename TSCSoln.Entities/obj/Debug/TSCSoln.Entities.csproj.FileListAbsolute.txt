@@ -1,0 +1,6 @@
+D:\Masters\TSCSoln\TSCSoln.Entities\bin\Debug\TSCSoln.Entities.dll
+D:\Masters\TSCSoln\TSCSoln.Entities\bin\Debug\TSCSoln.Entities.pdb
+D:\Masters\TSCSoln\TSCSoln.Entities\obj\Debug\TSCSoln.Entities.csprojAssemblyReference.cache
+D:\Masters\TSCSoln\TSCSoln.Entities\obj\Debug\TSCSoln.Entities.csproj.CoreCompileInputs.cache
+D:\Masters\TSCSoln\TSCSoln.Entities\obj\Debug\TSCSoln.Entities.dll
+D:\Masters\TSCSoln\TSCSoln.Entities\obj\Debug\TSCSoln.Entities.pdb
