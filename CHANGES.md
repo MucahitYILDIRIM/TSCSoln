@@ -39,10 +39,30 @@
 - `WebUI/HomeControllerTests` — `Index`/`About`/`Contact` view ve `ViewBag.Message` değerleri.
 - `Entities` projesi yalnızca otomatik property'ler içerdiği için ayrı test yazılmadı (dolaylı olarak diğer testlerde kullanılıyor).
 
+### Ek tur (2026-09-24): App_Start yapılandırma sınıfları
+Önceki turda `RouteConfig`, `FilterConfig`, `BundleConfig` "framework yapılandırması" gerekçesiyle kapsam dışı
+bırakılmıştı. Bu sınıflar aslında saf, statik, parametre alan (`RouteCollection`/`GlobalFilterCollection`/
+`BundleCollection`) metotlar olduğu için canlı bir ASP.NET runtime'a ihtiyaç duymadan unit test edilebilirler
+(ASP.NET MVC'de yaygın bir test pratiği). Bu yüzden eksik kabul edildi ve eklendi:
+- `WebUI/RouteConfigTests.cs` — tam olarak 2 route eklendiği, `.axd` kaynaklarının `StopRoutingHandler` ile
+  yok sayıldığı, `Default` route'unun URL şablonu ve varsayılan değerleri (`controller=Home`, `action=Index`,
+  `id=UrlParameter.Optional`).
+- `WebUI/FilterConfigTests.cs` — tam olarak 1 global filtre eklendiği ve bunun `HandleErrorAttribute` olduğu.
+- `WebUI/BundleConfigTests.cs` — tam olarak 5 bundle eklendiği ve beklenen sanal yolların (`~/bundles/jquery` vb.)
+  doğru olduğu.
+
+Bu testler için `TSCSoln.Tests.csproj`'a `Microsoft.AspNet.Web.Optimization` paket referansı ve
+`System.Web.Routing` framework referansı eklendi (derleme zamanında `RouteCollection`, `BundleCollection` gibi
+tipler için gerekli; `WebUI` projesi zaten aynı paket/referansları kullanıyor).
+
+`BundleConfig`, `Global.asax` (`Application_Start`, `AreaRegistration.RegisterAllAreas()` gibi gerçek bir HTTP
+modülü/pipeline'ı gerektirir) ve Razor view'lar hâlâ kapsam dışı; bunlar unit test değil entegrasyon/UI testi
+gerektirir.
+
 ### Kapsam dışı bırakılanlar / notlar
 - `TestDal.PRC_GET_TESTS`'in başarılı yolu (gerçek stored procedure çağrısı) unit test değil entegrasyon testi
   gerektirir; SQL Server olmadan test edilemez.
-- `BundleConfig`, `RouteConfig`, `FilterConfig`, `Global.asax` ve Razor view'lar test edilmedi (framework yapılandırması).
+- `Global.asax` ve Razor view'lar test edilmedi (gerçek ASP.NET pipeline/runtime gerektirir).
 - Mevcut koddaki şüpheli davranışlar **düzeltilmedi**, sadece belgelendi:
   - `Utility.GetItem` DB'den gelen `NULL` (`DBNull`) değerlerde `ArgumentException` fırlatıyor
     (`DataTableToList_DbNullValue_ThrowsArgumentException` bu davranışı sabitliyor).
