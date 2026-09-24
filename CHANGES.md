@@ -55,9 +55,8 @@ Bu testler için `TSCSoln.Tests.csproj`'a `Microsoft.AspNet.Web.Optimization` pa
 `System.Web.Routing` framework referansı eklendi (derleme zamanında `RouteCollection`, `BundleCollection` gibi
 tipler için gerekli; `WebUI` projesi zaten aynı paket/referansları kullanıyor).
 
-`BundleConfig`, `Global.asax` (`Application_Start`, `AreaRegistration.RegisterAllAreas()` gibi gerçek bir HTTP
-modülü/pipeline'ı gerektirir) ve Razor view'lar hâlâ kapsam dışı; bunlar unit test değil entegrasyon/UI testi
-gerektirir.
+`Global.asax` (`Application_Start`, `AreaRegistration.RegisterAllAreas()` gibi gerçek bir HTTP modülü/pipeline'ı
+gerektirir) ve Razor view'lar hâlâ kapsam dışı; bunlar unit test değil entegrasyon/UI testi gerektirir.
 
 ### Kapsam dışı bırakılanlar / notlar
 - `TestDal.PRC_GET_TESTS`'in başarılı yolu (gerçek stored procedure çağrısı) unit test değil entegrasyon testi
