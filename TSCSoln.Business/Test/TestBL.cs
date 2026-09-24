@@ -8,12 +8,22 @@ using TSCSoln.Entities.Test;
 
 namespace TSCSoln.Business.Test
 {
-    public class TestBL
+    public interface ITestBL
     {
-        private TestDal dal;
+        GetTestResponse GetTestList(GetTestRequest request);
+    }
+
+    public class TestBL : ITestBL
+    {
+        private ITestDal dal;
         public TestBL()
+            : this(new TestDal())
         {
-           dal = new TestDal();
+        }
+
+        public TestBL(ITestDal dal)
+        {
+            this.dal = dal;
         }
         public GetTestResponse GetTestList(GetTestRequest request)
         {
