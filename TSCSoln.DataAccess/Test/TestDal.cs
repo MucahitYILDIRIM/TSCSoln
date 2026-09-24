@@ -10,12 +10,22 @@ using System.Configuration;
 
 namespace TSCSoln.DataAccess
 {
-    public class TestDal
+    public interface ITestDal
+    {
+        GetTestResponse PRC_GET_TESTS(GetTestRequest request);
+    }
+
+    public class TestDal : ITestDal
     {
         private SqlConnection con;
         public TestDal()
+            : this(ConfigurationManager.AppSettings["ConnectionString"].ToString())
         {
-            con = new SqlConnection(ConfigurationManager.AppSettings["ConnectionString"].ToString());
+        }
+
+        public TestDal(string connectionString)
+        {
+            con = new SqlConnection(connectionString);
         }
         
         public GetTestResponse PRC_GET_TESTS(GetTestRequest request)

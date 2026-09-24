@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TSCSoln.Entities", "TSCSoln
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TSCSoln.DataAccess", "TSCSoln.DataAccess\TSCSoln.DataAccess.csproj", "{87F72BCA-D0F6-4B87-BB1E-3E498E0D21EE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TSCSoln.Tests", "TSCSoln.Tests\TSCSoln.Tests.csproj", "{66B27C48-2AE1-4396-A97A-318E02A169D9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{87F72BCA-D0F6-4B87-BB1E-3E498E0D21EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{87F72BCA-D0F6-4B87-BB1E-3E498E0D21EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{87F72BCA-D0F6-4B87-BB1E-3E498E0D21EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66B27C48-2AE1-4396-A97A-318E02A169D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66B27C48-2AE1-4396-A97A-318E02A169D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66B27C48-2AE1-4396-A97A-318E02A169D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66B27C48-2AE1-4396-A97A-318E02A169D9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -10,10 +10,22 @@ namespace TSCSoln.WebUI.Controllers
 {
     public class TestController : Controller
     {
-        private TestBL BL;
+        private ITestBL BL;
+        private readonly Func<ITestBL> blFactory;
+
+        public TestController()
+            : this(() => new TestBL())
+        {
+        }
+
+        public TestController(Func<ITestBL> blFactory)
+        {
+            this.blFactory = blFactory;
+        }
+
         public ActionResult Index()
         {
-            BL = new TestBL();
+            BL = blFactory();
             GetTestResponse response = BL.GetTestList(new GetTestRequest());
             return View(response.TestList);
         }

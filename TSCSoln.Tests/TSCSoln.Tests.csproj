@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net461</TargetFramework>
+    <IsPackable>false</IsPackable>
+    <RootNamespace>TSCSoln.Tests</RootNamespace>
+    <AssemblyName>TSCSoln.Tests</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.11.0" />
+    <PackageReference Include="MSTest.TestAdapter" Version="2.2.10" />
+    <PackageReference Include="MSTest.TestFramework" Version="2.2.10" />
+    <PackageReference Include="Microsoft.AspNet.Mvc" Version="5.2.4" />
+    <!-- Lets the project build without the .NET Framework 4.6.1 targeting pack installed. -->
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.3" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="System.Web" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TSCSoln.Entities\TSCSoln.Entities.csproj" />
+    <ProjectReference Include="..\TSCSoln.DataAccess\TSCSoln.DataAccess.csproj" />
+    <ProjectReference Include="..\TSCSoln.Business\TSCSoln.Business.csproj" />
+    <ProjectReference Include="..\TSCSoln.WebUI\TSCSoln.WebUI.csproj" />
+  </ItemGroup>
+
+</Project>
